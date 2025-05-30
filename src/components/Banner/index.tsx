@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import bannerImg from '../../assets/images/banner-homem-aranha.png'
 import { Game } from '../../pages/Home'
 import Button from '../Button'
 import Tag from '../Tag'
@@ -33,7 +32,7 @@ const Banner = () => {
         </div>
         <Button
           type="link"
-          to="/produto"
+          to={`/product/${game.id}`}
           title="clique aqui para aproveitar essa oferta"
         >
           Aproveitar
