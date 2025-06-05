@@ -33,7 +33,7 @@ const ProductsList = ({ background, title, games }: Props) => {
 
     return tags
   }
-//teste
+  //teste
   return (
     <Container background={background}>
       <div className="container">

@@ -6,14 +6,12 @@ import { Imagem, Titulo, Precos } from './styles'
 
 import { formataPreco } from '../ProductsList'
 
-const Banner = () => {
-  const [game, setGame] = useState<Game>()
+import { useGetFeaturedGameQuery } from '../../services/api'
 
-  useState(() => {
-    fetch('https://fake-api-tau.vercel.app/api/eplay/destaque')
-      .then((res) => res.json())
-      .then((res) => setGame(res))
-  })
+const Banner = () => {
+  const { data: game, isLoading } = useGetFeaturedGameQuery()
+
+  //renomeando para game/\, não precisa mudar os nomes das chamadas dele
 
   if (!game) {
     return <h3> Carregando...</h3>
