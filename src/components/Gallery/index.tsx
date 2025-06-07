@@ -9,20 +9,20 @@ import spiderman from '../../assets/images/banner-homem-aranha.png'
 import zoom from '../../assets/images/mais-zoom.png'
 import play from '../../assets/images/play.png'
 
-const mock: GalleryItem[] = [
-  {
-    type: 'image',
-    url: spiderman
-  },
-  {
-    type: 'image',
-    url: hogwarts
-  },
-  {
-    type: 'video',
-    url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=jhJk34IkO8sOPaYf'
-  }
-]
+// const mock: GalleryItem[] = [
+//   {
+//     type: 'image',
+//     url: spiderman
+//   },
+//   {
+//     type: 'image',
+//     url: hogwarts
+//   },
+//   {
+//     type: 'video',
+//     url: 'https://www.youtube.com/embed/uHGShqcAHlQ?si=jhJk34IkO8sOPaYf'
+//   }
+// ]
 
 type Props = {
   defaultCover: string
