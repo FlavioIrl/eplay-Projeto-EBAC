@@ -4,8 +4,6 @@ import { Item, Items, Action, Modal, ModalContent } from './styles'
 import { GalleryItem } from '../../pages/Home'
 
 import fechar from '../../assets/images/close.png'
-import hogwarts from '../../assets/images/fundo_hogwarts.png'
-import spiderman from '../../assets/images/banner-homem-aranha.png'
 import zoom from '../../assets/images/mais-zoom.png'
 import play from '../../assets/images/play.png'
 
