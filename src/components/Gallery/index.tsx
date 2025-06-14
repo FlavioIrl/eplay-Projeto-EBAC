@@ -98,7 +98,7 @@ const Gallery = ({ defaultCover, name, items }: Props) => {
             />
           </header>
           {modal.type === 'image' ? (
-            <img src={modal.url} />
+            <img src={modal.url} alt={`Mídia ampliada de ${name}`} />
           ) : (
             <iframe frameBorder={0} src={modal.url} />
           )}
