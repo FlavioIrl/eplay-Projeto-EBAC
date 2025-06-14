@@ -48,7 +48,14 @@ const Cart = () => {
                 <Tag>{item.details.system}</Tag>
                 <span>{formataPreco(item.prices.current)}</span>
               </div>
-              <button onClick={() => removeItem(item.id)} type="button" />
+              <button
+                onClick={() => removeItem(item.id)}
+                type="button"
+                aria-label={`Remover ${item.name} do carrinho`}
+                title={`Remover ${item.name} do carrinho`}
+              >
+                Remover
+              </button>
             </CartItem>
           ))}
         </ul>
