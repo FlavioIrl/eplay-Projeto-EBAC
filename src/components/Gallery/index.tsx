@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import Section from '../Section'
 import * as S from './styles'
-import { GalleryItem } from '../../pages/Home'
 
 import closeIcon from '../../assets/images/close.png'
 import zoom from '../../assets/images/mais-zoom.png'

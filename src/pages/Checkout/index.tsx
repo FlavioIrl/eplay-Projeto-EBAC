@@ -23,7 +23,7 @@ type Installments = {
 
 const Checkout = () => {
   const [payWithCard, setPayWithCard] = useState(false)
-  const [purchase, { data, isSuccess }] = usePurchaseMutation()
+  const [purchase, { data, isSuccess, isLoading }] = usePurchaseMutation()
   const { items } = useSelector((state: RootReducer) => state.cart)
   const [installments, setInstallments] = useState<Installments[]>([])
 
@@ -134,7 +134,7 @@ const Checkout = () => {
     }
   })
 
-  const checkInputError = (fieldName: string, message?: string) => {
+  const checkInputError = (fieldName: string) => {
     const isTouched = fieldName in form.touched
     const isInvalid = fieldName in form.errors
     const hasError = isTouched && isInvalid
@@ -168,7 +168,7 @@ const Checkout = () => {
 
   return (
     <div className="container">
-      {isSuccess ? (
+      {isSuccess && data ? (
         <Card title="Muito obrigado">
           <>
             <p>
@@ -443,8 +443,9 @@ const Checkout = () => {
             type="submit"
             title="Click aqui para finalizar a compra"
             onClick={form.handleSubmit}
+            disabled={isLoading}
           >
-            Finalizar compra
+            {isLoading ? 'Finalizando compra...' : 'Finalizar compra'}
           </Button>
         </form>
       )}

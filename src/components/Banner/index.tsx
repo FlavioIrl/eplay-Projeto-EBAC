@@ -1,6 +1,7 @@
 import Button from '../Button'
 import Tag from '../Tag'
 import * as S from './styles'
+import Loader from '../Loader'
 
 import { parseToBrl } from '../../utils'
 
@@ -12,7 +13,7 @@ const Banner = () => {
   //renomeando para game/\, não precisa mudar os nomes das chamadas dele
 
   if (!game) {
-    return <h3> Carregando...</h3>
+    return <Loader />
   }
 
   return (
