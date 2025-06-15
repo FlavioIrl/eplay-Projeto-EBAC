@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, cores } from '../../styles'
+import { breakpoints, colors } from '../../styles'
 
 export const Links = styled.ul`
   display: flex;
@@ -12,37 +12,20 @@ export const Links = styled.ul`
 `
 
 export const HeaderBar = styled.header`
-  background-color: ${cores.cinza};
+  background-color: ${colors.gray};
   padding: 24px;
   border-radius: 16px;
   margin-bottom: 80px;
 
-  a {
-    color: ${cores.branca};
+  a,
+  span {
+    color: ${colors.white};
     text-decoration: none;
     font-weight: bold;
   }
-`
 
-export const NaviMobile = styled.nav`
-  display: none;
-
-  &.is-open {
-    display: block;
-  }
-`
-
-export const LinkItem = styled.li`
-  margin-right: 16px;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    margin-right: 0;
-
-    a {
-      display: block;
-      padding: 16px 0;
-      text-align: center;
-    }
+  h1 {
+    line-height: 0;
   }
 `
 
@@ -66,8 +49,31 @@ export const HeaderRow = styled.div`
   }
 `
 
-export const CartButton = styled.a`
+export const NavMobile = styled.nav`
+  display: none;
+
+  &.is-open {
+    display: block;
+  }
+`
+
+export const LinkItem = styled.li`
+  margin-right: 16px;
+
+  @media (max-width: ${breakpoints.tablet}) {
+    margin-right: 0;
+
+    a {
+      padding: 16px 0;
+      display: block;
+      text-align: center;
+    }
+  }
+`
+
+export const CartButton = styled.span`
   display: flex;
+  cursor: pointer;
 
   img {
     margin-left: 16px;
@@ -87,7 +93,7 @@ export const Hamburguer = styled.div`
     height: 2px;
     display: block;
     width: 100%;
-    background-color: ${cores.branca};
+    background-color: ${colors.white};
     margin-bottom: 4px;
   }
 
