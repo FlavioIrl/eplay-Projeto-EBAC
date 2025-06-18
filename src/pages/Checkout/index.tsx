@@ -164,9 +164,13 @@ const Checkout = () => {
     }
   }, [totalPrice])
 
-  useEffect(() => {})
+  useEffect(() => {
+    if (isSuccess) {
+      dispatch(clear())
+    }
+  }, [isSuccess, dispatch])
 
-  if (items.length === 0) {
+  if (items.length === 0 && !isSuccess) {
     return <Navigate to="/" />
   }
 
